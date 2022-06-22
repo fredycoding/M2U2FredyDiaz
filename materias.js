@@ -5,15 +5,28 @@ const nombre = document.getElementById('nombre');
 
 
 const ingresarvalores = (valor) => {
-    //Este es un for que me llena de lis 
+    //Este es un for que me llena de lis, recorro el for dependiendo de la cantidad de materias
     for (let step = 0; step < valor; step++) {
-        ulvalores.innerHTML += `<li><input type="text" id="valor${step + 1}" class="form-control mt-2" placeholder="Ingrese el valor de la materia ${step + 1}"></li>`
+        ulvalores.innerHTML += `<li><input type="text" id="valor${step + 1}" class="form-control mt-2 valoresmaterias" placeholder="Ingrese el valor de la materia ${step + 1}"></li>`
     }
+    //Por último agrego un botón para comprobar los nuevos campos creados dinámicamente
     ulvalores.innerHTML += "<button class='btn btn-danger mt-2' id = 'botonfinalizar'>Finalizar</button>"
-
+    
+    //Creo la función del boton finalizar
     const botonfinalizar = document.getElementById('botonfinalizar');
     botonfinalizar.addEventListener('click', () => {
-        console.log("Testeando boton finalizar");
+        //creo una constante que me trae todos los objetos 
+        //con la clase valoresmaterias las cuales fueron creadas dinámicamente
+        const items = document.getElementsByClassName("valoresmaterias")
+
+        //recorro los items y su valor
+        let costomaterias = 0
+        for (let x = 0; x < items.length; x++) {
+            console.log(items[x].value)
+            costomaterias = costomaterias + parseInt(items[x].value)
+        } 
+
+        console.log("Costo Materias: ", costomaterias);
     })
 
 }
