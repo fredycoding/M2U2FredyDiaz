@@ -14,9 +14,10 @@ boton.addEventListener("click", () => {
   if (A != B && A != C && A != D && B != C && B != D && C != D) {
     const ListaNumeros = [A, B, C, D];
     console.log(ListaNumeros);
-    respuesta.textContent = "El valor máximo es: " + Math.max(...ListaNumeros);
+    respuesta.innerHTML = "El valor máximo es: " + Math.max(...ListaNumeros) + "<br>" + "El valor mínimo es: " + Math.min(...ListaNumeros);
+
   } else {
     respuesta.textContent =
-      "Error: Ninguno de los números no deben ser iguales";
+      "Error: Ninguno de los números deben ser iguales";
   }
 });
