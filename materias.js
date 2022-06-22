@@ -1,4 +1,4 @@
-const cantidadmaterias = document.getElementById("materias");
+
 const ulvalores = document.getElementById("ulvalores");
 const boton = document.getElementById("boton");
 const nombre = document.getElementById("nombre");
@@ -65,11 +65,18 @@ const ingresarvalores = (valor) => {
 
 
 boton.addEventListener("click", () => {
+  const cantidadmaterias = document.getElementById("materias");
   let errores = 0;
 
   if (cantidadmaterias.value == "") {
     alert("Debe ingresar la cantidad de materias");
     errores = errores + 1;
+  }
+
+  if(isNaN(cantidadmaterias.value)){
+    alert("Debe ingresar un número válido en la cantidad de materias");
+    errores = errores + 1;
+
   }
 
   if (nombre.value == "") {
