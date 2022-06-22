@@ -28,11 +28,13 @@ const ingresarvalores = (valor) => {
     let costomaterias = 0;
     let contadorerrores = 0;
     for (let x = 0; x < items.length; x++) {
-      console.log(items[x].value);
-      costomaterias = costomaterias + parseInt(items[x].value); //Sumo los valores obtenidos
-      if(isNaN(items[x].value)){      
+      
+      if(isNaN(parseInt(items[x].value))){      
         contadorerrores += 1;
       }
+      console.log(items[x].value);
+      costomaterias = costomaterias + parseInt(items[x].value); //Sumo los valores obtenidos
+
     }
     
     // Compruebo si hay errores de acuerdo al contador
