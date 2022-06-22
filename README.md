@@ -9,7 +9,8 @@ e. Descuento del 20% sobre el costo de las materias.<br>
 Por medio del algoritmo imprimir el valor total de las materias que matriculó el estudiante con el descuento del 20% más los costos fijos.<br>
 
 ### Diagrama de flujo
-![Diagrama de Flujo Ejercicio 1](https://user-images.githubusercontent.com/16197568/174928865-d6a5d5af-dd92-4229-b432-ce40c5c65dc6.jpeg)
+![Diagrama de Flujo Ejercicio 1](https://user-images.githubusercontent.com/16197568/175173021-b32e08e7-10b6-4136-9d6c-3a7ff7e579b6.jpeg)
+
 
 #### Preent Screen
 ![image](https://user-images.githubusercontent.com/16197568/175128013-9c8c64c5-3e55-47e7-ba45-f22715a88fd6.png)
