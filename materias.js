@@ -7,6 +7,7 @@ let respuesta = document.getElementById("respuesta");
 
 //**** Función que recorre la materias que ingresé para crear los inputs y validar su información
 const ingresarvalores = (valor) => {
+    
   //Este es un for que me llena de lis, recorro el for dependiendo de la cantidad de materias
   for (let step = 0; step < valor; step++) {
     ulvalores.innerHTML += `<li><input type="number" class="form-control mt-2 valoresmaterias" 
@@ -67,7 +68,9 @@ const ingresarvalores = (valor) => {
 boton.addEventListener("click", () => {
   const cantidadmaterias = document.getElementById("materias");
   let errores = 0;
+  ulvalores.innerHTML ="" // Limpio el innerHTML
 
+  // Valido los campos
   if (cantidadmaterias.value == "") {
     alert("Debe ingresar la cantidad de materias");
     errores = errores + 1;
@@ -86,7 +89,7 @@ boton.addEventListener("click", () => {
 
   if (errores == 0) {
     const materias = parseInt(cantidadmaterias.value);
-    //boton.style.display = "none";
+    //Lo envio a la función ingresarvalores
     if (materias >= 1) {
       ingresarvalores(materias);
     }
