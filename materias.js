@@ -4,15 +4,15 @@ const boton = document.getElementById("boton");
 const nombre = document.getElementById("nombre");
 let respuesta = document.getElementById("respuesta");
 
+
+//**** Función que recorre la materias que ingresé para crear los inputs y validar su información
 const ingresarvalores = (valor) => {
   //Este es un for que me llena de lis, recorro el for dependiendo de la cantidad de materias
   for (let step = 0; step < valor; step++) {
-    ulvalores.innerHTML += `<li><input type="text" id="valor${
-      step + 1
-    }" class="form-control mt-2 valoresmaterias" placeholder="Ingrese el valor de la materia ${
-      step + 1
-    }"></li>`;
+    ulvalores.innerHTML += `<li><input type="number" class="form-control mt-2 valoresmaterias" 
+    placeholder="Ingrese el valor de la materia ${step + 1}"></li>`;
   }
+
   //Por último agrego un botón para comprobar los nuevos campos creados dinámicamente
   ulvalores.innerHTML +=
     "<button class='btn btn-danger mt-2' id = 'botonfinalizar'>Finalizar</button>";
@@ -26,10 +26,21 @@ const ingresarvalores = (valor) => {
 
     //recorro los items y su valor
     let costomaterias = 0;
+    let contadorerrores = 0;
     for (let x = 0; x < items.length; x++) {
       console.log(items[x].value);
       costomaterias = costomaterias + parseInt(items[x].value); //Sumo los valores obtenidos
+      if(isNaN(items[x].value)){      
+        contadorerrores += 1;
+      }
     }
+    
+    // Compruebo si hay errores de acuerdo al contador
+    if (contadorerrores > 0){
+        alert("Solo debe escribir números válidos")
+
+    }else{
+
     let descuento = costomaterias * 0.2;
     const papeleria = 20000;
     const carne = 8000;
@@ -39,12 +50,17 @@ const ingresarvalores = (valor) => {
     Valor total de las Materias: ${costomaterias}<br>
     Descuento: ${descuento} <br>
     Valor con Descuento: ${costomaterias - descuento} <br>
-    Valor a pagar (Papeleria, Carné, Valor Materias con Descuento): ${
+    Valor a Pagar (Papeleria + Carné + Valor Materias con Descuento): ${
       papeleria + carne + (costomaterias - descuento)
     }`;
     console.log("Costo Materias: ", costomaterias);
+
+    }
+    
   });
 };
+
+
 
 boton.addEventListener("click", () => {
   let errores = 0;
