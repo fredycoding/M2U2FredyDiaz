@@ -3,12 +3,19 @@ const ulvalores = document.getElementById('ulvalores');
 const boton = document.getElementById('boton');
 const nombre = document.getElementById('nombre');
 
+
 const ingresarvalores = (valor) => {
     //Este es un for que me llena de lis 
     for (let step = 0; step < valor; step++) {
         ulvalores.innerHTML += `<li><input type="text" id="valor${step + 1}" class="form-control mt-2" placeholder="Ingrese el valor de la materia ${step + 1}"></li>`
     }
-    ulvalores.innerHTML += "<button class='btn btn-danger mt-2'>Finalizar</button>"
+    ulvalores.innerHTML += "<button class='btn btn-danger mt-2' id = 'botonfinalizar'>Finalizar</button>"
+
+    const botonfinalizar = document.getElementById('botonfinalizar');
+    botonfinalizar.addEventListener('click', () => {
+        console.log("Testeando boton finalizar");
+    })
+
 }
 
 
@@ -31,9 +38,6 @@ boton.addEventListener('click', () => {
         if (materias >= 1) {
             ingresarvalores(materias)
         }
-
     }
-
-
-
 })
+
