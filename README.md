@@ -11,6 +11,10 @@ Por medio del algoritmo imprimir el valor total de las materias que matriculó e
 ### Diagrama de flujo
 ![Diagrama de Flujo Ejercicio 1](https://user-images.githubusercontent.com/16197568/174928865-d6a5d5af-dd92-4229-b432-ce40c5c65dc6.jpeg)
 
+#### Preent Screen
+![image](https://user-images.githubusercontent.com/16197568/175128013-9c8c64c5-3e55-47e7-ba45-f22715a88fd6.png)
+
+
 # Ejercicio N° 2
 
 Desarrolle un algoritmo que permita:<br>
@@ -21,3 +25,6 @@ h. Crear un mensaje de alerta en caso que se detecte la introducción de valores
 
 ### Diagrama de flujo!
 ![Ejercicio N° 2(1)](https://user-images.githubusercontent.com/16197568/175113271-425572d8-656d-43ab-a5d6-517ba5f33e1e.jpeg)
+
+#### Preent Screen
+![image](https://user-images.githubusercontent.com/16197568/175127663-4ed1145d-0273-4cc0-bde2-127aa4787632.png)
