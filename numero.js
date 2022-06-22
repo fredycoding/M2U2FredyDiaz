@@ -26,12 +26,8 @@ boton.addEventListener("click", () => {
       // Agrego la respuesta al dom (objeto respuesta)
       // Utilizamos el Spread Operator (...) "Los 3 puntos"
       // transformamos la variable ListaNumeros en una lista de argumentos
-      respuesta.innerHTML =
-        "El valor máximo es: " +
-        Math.max(...ListaNumeros) +
-        "<br>" +
-        "El valor mínimo es: " +
-        Math.min(...ListaNumeros);
+      respuesta.innerHTML = "El valor máximo es: " + Math.max(...ListaNumeros) +
+        "<br>" + "El valor mínimo es: " + Math.min(...ListaNumeros);
     } else {
       respuesta.textContent = "Error: Ninguno de los números deben ser iguales";
     }
