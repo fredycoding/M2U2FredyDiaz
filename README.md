@@ -20,4 +20,4 @@ verificar que los cuatro valores introducidos por el teclado sean valores distin
 h. Crear un mensaje de alerta en caso que se detecte la introducción de valores iguales.<br>
 
 ### Diagrama de flujo!
-[Ejercicio N° 2(1)](https://user-images.githubusercontent.com/16197568/175113271-425572d8-656d-43ab-a5d6-517ba5f33e1e.jpeg)
+![Ejercicio N° 2(1)](https://user-images.githubusercontent.com/16197568/175113271-425572d8-656d-43ab-a5d6-517ba5f33e1e.jpeg)
