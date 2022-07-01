@@ -37,6 +37,8 @@ const ingresarvalores = (valor) => {
       costomaterias = costomaterias + parseInt(items[x].value); //Sumo los valores obtenidos
 
     }
+
+    
     
     // Compruebo si hay errores de acuerdo al contador
     if (contadorerrores > 0){
